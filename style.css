@@ -191,7 +191,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   background-color: var(--black-alpha-color);
   opacity: 0;
   pointer-events: none;
@@ -399,6 +398,31 @@ progress::-moz-progress-bar {
   border: thin solid var(--white-color);
 }
 
+.portfolio-modal {
+  background-color: var(--white-color);
+  padding: 1rem;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-modal h3 {
+  border-bottom: medium solid var(--first-color);
+  padding: .5rem 0;
+  margin: 1rem auto;
+  color: var(--title-color);
+}
+
+.portfolio-details {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-auto-rows: 2rem;
+}
+
+.portfolio-details b {
+  color: var(--first-color);
+}
+
 .service-card {
   margin: 1rem auto;
   padding: 1rem;
@@ -422,6 +446,16 @@ progress::-moz-progress-bar {
 
   .portfolio .section-title {
     grid-column: span 2;
+  }
+
+  .portfolio-modal {
+    max-width: 800px;
+    flex-direction: row;
+  }
+
+  .portfolio-info {
+    margin-left: 1rem;
+    align-self: center;
   }
 
   .services > .container {
